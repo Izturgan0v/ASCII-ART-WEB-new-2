@@ -19,8 +19,11 @@ func main() {
 	}
 	errFile = string(content)
 
-	ip := "10.25.0.59"
+	ip := "localhost"
 	port := 45674
+
+	// Обработчик для статических файлов (CSS, JS, изображения)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	http.HandleFunc("/", handlerHome)
 	http.HandleFunc("/sabik", handlerSabik)

@@ -2,66 +2,20 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Привет</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, rgb(27, 123, 196), #e9ec26);
-      font-family: sans-serif;
-    }
-    .greeting {
-      font-size: 100px;
-      color: rgb(9, 216, 210);
-      /* text-shadow - 'тень текста' */
-      text-shadow: 4px 4px 7px rgb(7, 115, 187); 
-      margin-bottom: 50px;
-      letter-spacing: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    textarea[type="text"], select {
-      font-size: 32px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      width: 400px;
-      max-width: 80%;
-    }
-    button {
-      font-size: 32px;
-      padding: 10px 30px;
-      background-color: #fff;
-      color: #4a90e2;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #eee;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Art Generator</title>
+  <link rel="stylesheet" href="/static/main.css">
 </head>
-<body>
+<body class="main-page">
   <div class="greeting">ASCII - ART</div>
-  <form action="/ascii-art" method="get" target="_blank">
-    <textarea type="text" name="text" placeholder="Введите текст">Some Text</textarea>
-    <select name="banner">
+  <form class="main-form" action="/ascii-art" method="get" target="_blank">
+    <textarea class="form-input" name="text" placeholder="Введите текст">Some Text</textarea>
+    <select class="form-select" name="banner">
       <option value="shadow">shadow</option>
       <option value="standard">standard</option>
       <option value="thinkertoy">thinkertoy</option>
     </select>
-    <button type="submit">Создать ASCII Art</button>
+    <button class="submit-btn" type="submit">Создать ASCII Art</button>
   </form>
 </body>
 </html>
