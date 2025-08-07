@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .error {
+            font-size: 400px;
+            font-weight: bold;
+            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #0086ec,#0086ec, #ffdd00, #02ab4b,#02ab4b); /* Градиент с синим, зеленым и желтым */
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #02ab4b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0086ec;
+        }
+    </style>
+</head>
+<body>
+    <div class="error">%d</div>
+    <a href="/" class="btn">Вернуться на главную</a>
+</body>
+</html>
